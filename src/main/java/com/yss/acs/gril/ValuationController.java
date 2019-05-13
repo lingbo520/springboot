@@ -36,5 +36,11 @@ public class ValuationController {
 //        required是否必输 ，defaultValue不能为int
         return "id："+id;
     }
+    @GetMapping(value = "/valua")
+//    GetMappingh和GetMapping一样，简化版
+    public String revcherId(@RequestParam(value = "id",required = false,defaultValue = "0") int id){
+//        required是否必输 ，defaultValue不能为int
+        return "id："+id;
+    }
 }
 
