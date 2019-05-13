@@ -17,7 +17,8 @@ public class ValuationController {
     @Autowired
     private GirlProperties girl;
 
-    @RequestMapping(value = "/valuation",method = RequestMethod.GET)
+    @RequestMapping(value = {"/valuation","hi"},method = RequestMethod.GET)
+//    指定能被多个路径映射
     public String say(){
         return "val:"+girl.getSex();
 
