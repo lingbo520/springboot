@@ -32,7 +32,8 @@ public class ValuationController {
     }
 
     @RequestMapping(value = "/valu",method = RequestMethod.GET)
-    public String revchId(@RequestParam("id") int id){
+    public String revchId(@RequestParam(value = "id",required = false,defaultValue = "0") int id){
+//        required是否必输 ，defaultValue不能为int
         return "id："+id;
     }
 }
