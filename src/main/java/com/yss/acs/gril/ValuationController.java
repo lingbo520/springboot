@@ -2,10 +2,7 @@ package com.yss.acs.gril;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author lwm
@@ -31,6 +28,11 @@ public class ValuationController {
     }
     @RequestMapping(value = "/{id}/valuation",method = RequestMethod.GET)
     public String revId(@PathVariable("id") int id){
+        return "id："+id;
+    }
+
+    @RequestMapping(value = "/valu",method = RequestMethod.GET)
+    public String revchId(@RequestParam("id") int id){
         return "id："+id;
     }
 }
