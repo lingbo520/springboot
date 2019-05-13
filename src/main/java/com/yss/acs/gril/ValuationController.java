@@ -29,5 +29,9 @@ public class ValuationController {
     public String getId(@PathVariable("id") int id){
         return "id"+id;
     }
+    @RequestMapping(value = "/{id}/valuation",method = RequestMethod.GET)
+    public String revId(@PathVariable("id") int id){
+        return "id："+id;
+    }
 }
 
