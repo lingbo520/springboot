@@ -37,7 +37,7 @@ public class ValuationController {
         return "id："+id;
     }
     @GetMapping(value = "/valua")
-//    GetMappingh和GetMapping一样，是简化版
+//    GetMapping和@RequestMapping(method = RequestMethod.GET)一样，是简化版
     public String revcherId(@RequestParam(value = "id",required = false,defaultValue = "0") int id){
 //        required是否必输 ，defaultValue不能为int
         return "id："+id;
