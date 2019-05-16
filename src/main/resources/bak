@@ -1,0 +1,13 @@
+ddl-auto: create
+先删除后创建
+ddl-auto: update
+数据不会消失
+
+create-drop
+应用停下来时删除
+
+none
+什么都不做
+
+validate
+验证类属性和数据库是否一致 ，不一致会报错
