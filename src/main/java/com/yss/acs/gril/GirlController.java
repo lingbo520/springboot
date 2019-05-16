@@ -65,7 +65,14 @@ public class GirlController {
     public void grilDeleted(@PathVariable("id") Integer id) {
         girlRepository.deleteById(id);
     }
+/*
+扩展jpa方法
+ */
+    @GetMapping(value = "/girls/age/{age}")
+    public List<Gril> grilFindByAge(@PathVariable("age") Integer age){
 
+        return girlRepository.findbyAge(age);
+    }
 }
 
 
