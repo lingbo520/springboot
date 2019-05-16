@@ -1,5 +1,6 @@
 package com.yss.acs.gril;
 
+import com.yss.acs.gril.service.GrilService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,8 @@ public class GirlController {
     @Autowired
     private GirlRepository girlRepository;
 
+    @Autowired
+    private GrilService grilService;
     /**
      * 查询所有女生列表
      */
@@ -73,6 +76,16 @@ public class GirlController {
 
         return girlRepository.findbyAge(age);
     }
+
+
+    /*
+    事务
+     */
+    @GetMapping(value = "/girls/two")
+    public void girlTwo(){
+        grilService.insertTwo();
+    }
+
 }
 
 
